@@ -32,17 +32,21 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(),
-              Text(
+              const Text(
                 'Email',
-                style: kGreyText,
+                style: TextStyle(
+                  color: kGreyText,
+                ),
               ),
               FieldText.fieldText(
                 fieldIcon: const Icon(Icons.people_alt),
                 hintText: 'Enter your Email',
               ),
-              Text(
+              const Text(
                 'Password',
-                style: kGreyText,
+                style: TextStyle(
+                  color: kGreyText,
+                ),
               ),
               FieldText.fieldText(
                 fieldIcon: const Icon(Icons.lock_open),

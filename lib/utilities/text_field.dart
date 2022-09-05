@@ -1,17 +1,30 @@
 import 'package:flutter/material.dart';
+import 'constants.dart';
 
 class FieldText {
-  static Expanded fieldText({
-    Color color = const Color(0xFF9C9C9C),
+  static Padding fieldText({
+    Color color = kGreyText,
     Icon? fieldIcon,
     String? hintText,
   }) {
-    return Expanded(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: TextField(
         decoration: InputDecoration(
-          prefixIcon: fieldIcon,
+          prefixIcon: Container(
+            margin: const EdgeInsets.symmetric(vertical: 4.0),
+            child: fieldIcon,
+            decoration: const BoxDecoration(
+              border: Border(
+                right: BorderSide(
+                  color: kGreyText,
+                ),
+              ),
+            ),
+          ),
           hintText: hintText,
           enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(20.0),
             borderSide: BorderSide(
               width: 2,
               color: color,
