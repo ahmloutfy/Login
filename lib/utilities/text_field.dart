@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'constants.dart';
 
 class FieldText {
@@ -11,8 +12,11 @@ class FieldText {
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: TextField(
         decoration: InputDecoration(
+          prefix: const SizedBox(
+            width: 5.0,
+          ),
+          hintText: hintText,
           prefixIcon: Container(
-            margin: const EdgeInsets.symmetric(vertical: 4.0),
             child: fieldIcon,
             decoration: const BoxDecoration(
               border: Border(
@@ -22,7 +26,6 @@ class FieldText {
               ),
             ),
           ),
-          hintText: hintText,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20.0),
             borderSide: BorderSide(
