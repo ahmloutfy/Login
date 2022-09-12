@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:login_page/utilities/text_buttons.dart';
 import '../utilities/constants.dart';
 import '../utilities/text_field.dart';
+import '../utilities/text_buttons.dart';
 import '../utilities/texts.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -20,6 +21,9 @@ class LoginScreen extends StatelessWidget {
           )),
           child: Column(
             children: [
+              const SizedBox(
+                height: 100.0,
+              ),
               Text(
                 'DEMO',
                 style: BlueText.blueString(),
@@ -32,25 +36,36 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(),
-              const Text(
-                'Email',
-                style: TextStyle(
-                  color: kGreyText,
+              const Padding(
+                padding: EdgeInsets.only(right: 265.0),
+                child: Text(
+                  'Email',
+                  style: TextStyle(
+                    color: kGreyText,
+                  ),
                 ),
               ),
               FieldText.fieldText(
                 fieldIcon: const Icon(Icons.people_alt),
                 hintText: 'Enter your Email',
               ),
-              const Text(
-                'Password',
-                style: TextStyle(
-                  color: kGreyText,
+              const Padding(
+                padding: EdgeInsets.only(right: 240.0),
+                child: Text(
+                  'Password',
+                  style: TextStyle(
+                    color: kGreyText,
+                  ),
                 ),
               ),
               FieldText.fieldText(
                 fieldIcon: const Icon(Icons.lock_open),
                 hintText: 'Enter your Password',
+              ),
+              const SizedBox(),
+              ButtonText.buttonText(
+                buttonString: 'LOGIN',
+                buttonIcon: const Icon(Icons.arrow_right_alt),
               ),
               Text(
                 'DON\'T HAVE AN ACCOUNT?',
