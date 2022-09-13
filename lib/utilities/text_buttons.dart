@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
 
@@ -12,12 +11,13 @@ class ButtonText {
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: TextButton(
         style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(color!),
+            backgroundColor:
+                MaterialStateProperty.all<Color>(color ?? kLightBlueText),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(25.0),
             ))),
-        onPressed: () => null,
+        onPressed: () => Null,
         child: Row(children: [
           Text(
             buttonString!,
