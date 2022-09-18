@@ -9,27 +9,30 @@ class FieldText {
   }) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
-      child: TextField(
-        decoration: InputDecoration(
-          prefix: const SizedBox(
-            width: 5.0,
-          ),
-          hintText: hintText,
-          prefixIcon: Container(
-            child: fieldIcon,
-            decoration: const BoxDecoration(
-              border: Border(
-                right: BorderSide(
-                  color: kGreyText,
+      child: SizedBox(
+        height: 55.0,
+        child: TextField(
+          decoration: InputDecoration(
+            prefix: const SizedBox(
+              width: 5.0,
+            ),
+            hintText: hintText,
+            prefixIcon: Container(
+              child: fieldIcon,
+              decoration: const BoxDecoration(
+                border: Border(
+                  right: BorderSide(
+                    color: kGreyText,
+                  ),
                 ),
               ),
             ),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20.0),
-            borderSide: BorderSide(
-              width: 2,
-              color: color,
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(21.0),
+              borderSide: BorderSide(
+                width: 2,
+                color: color,
+              ),
             ),
           ),
         ),
